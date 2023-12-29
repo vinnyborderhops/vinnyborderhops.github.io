@@ -1,0 +1,20 @@
+div {
+  text-align: center;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  color: #555;
+  background-color: black;
+}
+
+a {
+  color: #555;
+  font-size: 1.25rem;
+}
