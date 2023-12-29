@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  
+  font-family: system-ui, sans-serif;
   background-color: black;
 }
 
@@ -9,7 +9,6 @@ h1 {
   font-size: 1.75rem;
   color: #555;
   text-align: center;
-  font-family: system-ui, sans-serif;
 }
 
 a {
@@ -17,5 +16,4 @@ a {
   font-weight: bold;
   color: #555;
   text-align: center;
-  font-family: system-ui, sans-serif;
 }
