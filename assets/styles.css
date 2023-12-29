@@ -4,16 +4,16 @@ body {
   background-color: black;
 }
 
-h1 {
+div {
   font-weight: bold;
-  font-size: 1.75rem;
   color: #555;
   text-align: center;
 }
 
-a {
+div h1 {
+  font-size: 1.75rem;
+}
+
+div a {
   font-size: 1.5rem;
-  font-weight: bold;
-  color: #555;
-  text-align: center;
 }
