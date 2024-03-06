@@ -1,0 +1,30 @@
+@import url('https://rsms.me/inter/inter.css');
+html {
+  background-color: #000000;
+  color: #555;
+  font-family: Inter sans-serif;
+  text-align: center;
+  }
+  .heading {
+    width: 100%;
+              }
+  .footer {
+    left: 0;
+    bottom:0;
+    width: 100%;
+  }
+  a:link {
+    color: #555;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  a:visited {
+    color: #777;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #777;
+    background-color: transparent;
+    text-decoration: underline;
+  }
