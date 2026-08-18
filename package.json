@@ -1,0 +1,12 @@
+{
+  "name": "vinnyborderhops.github.io",
+  "private": true,
+  "scripts": {
+    "build:site": "node scripts/build.mjs",
+    "build:css": "tailwindcss -i ./src/assets/tailwind.css -o ./_site/assets/styles.css --minify",
+    "build": "npm run build:site && npm run build:css"
+  },
+  "devDependencies": {
+    "tailwindcss": "3.4.17"
+  }
+}

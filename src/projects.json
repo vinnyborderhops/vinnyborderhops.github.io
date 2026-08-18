@@ -1,0 +1,9 @@
+[
+  {
+    "title": "Discord Video Compressor",
+    "description": "Compresses videos below Discord's 20 MB limit with FFmpeg and hardware acceleration.",
+    "url": "https://github.com/vinnyborderhops/discord-video-compressor",
+    "category": "Utility",
+    "languages": ["Python"]
+  }
+]
