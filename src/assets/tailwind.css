@@ -3,7 +3,37 @@
 @tailwind utilities;
 
 @layer base {
+  body {
+    background:
+      radial-gradient(
+        circle at 50% -10%,
+        rgb(41 37 36 / 0.7),
+        transparent 35rem
+      ),
+      theme("colors.stone.950");
+  }
+
   ::selection {
     @apply bg-orange-400 text-stone-950;
+  }
+}
+
+@layer components {
+  .project-card {
+    @apply flex min-h-56 flex-col rounded-2xl border border-stone-800 bg-stone-900/60 p-6;
+    @apply transition-[transform,background-color,border-color] duration-200 ease-out;
+    @apply hover:-translate-y-1 hover:border-orange-400 hover:bg-stone-900;
+    @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-400;
+    @apply focus-visible:ring-offset-4 focus-visible:ring-offset-stone-950;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
   }
 }

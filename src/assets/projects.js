@@ -27,12 +27,7 @@ async function loadProjects() {
 function createProjectCard(project, index) {
   const card = document.createElement("a");
 
-  card.className =
-    "group flex min-h-64 flex-col rounded-2xl border border-stone-800 " +
-    "bg-stone-900/60 p-6 transition hover:-translate-y-1 " +
-    "hover:border-orange-400/70 hover:bg-stone-900 focus:outline-none " +
-    "focus-visible:ring-2 focus-visible:ring-orange-400 " +
-    "focus-visible:ring-offset-4 focus-visible:ring-offset-stone-950";
+  card.className = "group project-card";
 
   card.href = project.url;
   card.target = "_blank";
@@ -46,12 +41,13 @@ function createProjectCard(project, index) {
 
   const metadata = document.createElement("span");
   metadata.className =
-    "font-mono text-xs uppercase tracking-widest text-stone-500";
+    "font-mono text-xs uppercase tracking-widest text-stone-400";
   metadata.textContent = `${number} / ${project.category}`;
 
   const arrow = document.createElement("span");
   arrow.className =
-    "text-xl text-stone-500 transition group-hover:-translate-y-0.5 " +
+    "text-xl text-stone-400 transition-[transform,color] duration-200 ease-out " +
+    "group-hover:-translate-y-0.5 " +
     "group-hover:translate-x-0.5 group-hover:text-orange-400";
   arrow.setAttribute("aria-hidden", "true");
   arrow.textContent = "↗";
