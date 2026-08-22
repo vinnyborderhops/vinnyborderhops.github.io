@@ -3,28 +3,71 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    color-scheme: dark;
+  }
+
   body {
     background:
       radial-gradient(
         circle at 50% -10%,
-        rgb(41 37 36 / 0.7),
-        transparent 35rem
+        rgb(68 64 60 / 0.55),
+        transparent 32rem
+      ),
+      radial-gradient(
+        circle at 90% 40%,
+        rgb(124 45 18 / 0.08),
+        transparent 30rem
       ),
       theme("colors.stone.950");
   }
 
   ::selection {
-    @apply bg-orange-400 text-stone-950;
+    @apply bg-accent text-stone-950;
   }
 }
 
 @layer components {
   .project-card {
-    @apply flex min-h-56 flex-col rounded-2xl border border-stone-800 bg-stone-900/60 p-6;
-    @apply transition-[transform,background-color,border-color] duration-200 ease-out;
-    @apply hover:-translate-y-1 hover:border-orange-400 hover:bg-stone-900;
-    @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-400;
+    @apply flex min-h-56 flex-col rounded-2xl border border-stone-800/80 bg-stone-900/70 p-6;
+    @apply shadow-lg shadow-black/10;
+    @apply transition-[transform,background-color,border-color,box-shadow] duration-200 ease-out;
+    @apply hover:-translate-y-1 hover:border-accent/80 hover:bg-stone-900;
+    @apply hover:shadow-xl hover:shadow-black/25;
+    @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-accent;
     @apply focus-visible:ring-offset-4 focus-visible:ring-offset-stone-950;
+  }
+
+  .project-card-header {
+    @apply mb-8 flex items-start justify-between gap-4;
+  }
+
+  .project-card-meta {
+    @apply font-mono text-xs uppercase tracking-widest text-stone-400;
+  }
+
+  .project-card-arrow {
+    @apply text-xl text-stone-400;
+    @apply transition-[transform,color] duration-200 ease-out;
+    @apply group-hover:-translate-y-0.5 group-hover:translate-x-0.5;
+    @apply group-hover:text-accent;
+  }
+
+  .project-card-title {
+    @apply text-xl font-semibold text-white;
+  }
+
+  .project-card-description {
+    @apply mt-3 flex-1 text-sm leading-6 text-stone-400;
+  }
+
+  .project-card-tags {
+    @apply mt-7 flex flex-wrap gap-2;
+  }
+
+  .project-card-tag {
+    @apply rounded-full border border-stone-700 px-3 py-1;
+    @apply font-mono text-xs text-stone-300;
   }
 }
 
@@ -35,5 +78,6 @@
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
   }
 }

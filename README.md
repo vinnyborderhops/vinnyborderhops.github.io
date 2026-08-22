@@ -18,6 +18,8 @@ npm run build
 
 The generated site is output to _site/.
 
+Run the site:
+
 ```bash
 npm run start
 ```

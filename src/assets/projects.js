@@ -2,7 +2,7 @@ async function loadProjects() {
   const container = document.getElementById("projects");
 
   try {
-    const response = await fetch("projects.json");
+    const response = await fetch("assets/data/projects.json");
 
     if (!response.ok) {
       throw new Error(`Failed to load projects: ${response.status}`);
@@ -37,41 +37,35 @@ function createProjectCard(project, index) {
   const number = String(index + 1).padStart(2, "0");
 
   const header = document.createElement("div");
-  header.className = "mb-8 flex items-start justify-between gap-4";
+  header.className = "project-card-header";
 
   const metadata = document.createElement("span");
-  metadata.className =
-    "font-mono text-xs uppercase tracking-widest text-stone-400";
+  metadata.className = "project-card-meta";
   metadata.textContent = `${number} / ${project.category}`;
 
   const arrow = document.createElement("span");
-  arrow.className =
-    "text-xl text-stone-400 transition-[transform,color] duration-200 ease-out " +
-    "group-hover:-translate-y-0.5 " +
-    "group-hover:translate-x-0.5 group-hover:text-orange-400";
+  arrow.className = "project-card-arrow";
   arrow.setAttribute("aria-hidden", "true");
   arrow.textContent = "↗";
 
   header.append(metadata, arrow);
 
   const title = document.createElement("h3");
-  title.className = "text-xl font-semibold text-white";
+  title.className = "project-card-title";
   title.textContent = project.title;
 
   const description = document.createElement("p");
-  description.className = "mt-3 flex-1 text-sm leading-6 text-stone-400";
+  description.className = "project-card-description";
   description.textContent = project.description;
 
   const languages = document.createElement("div");
-  languages.className = "mt-7 flex flex-wrap gap-2";
+  languages.className = "project-card-tags";
   languages.setAttribute("aria-label", "Languages used");
 
   for (const language of project.languages ?? []) {
     const tag = document.createElement("span");
 
-    tag.className =
-      "rounded-full border border-stone-700 px-3 py-1 " +
-      "font-mono text-xs text-stone-300";
+    tag.className = "project-card-tag";
 
     tag.textContent = language;
 

@@ -5,11 +5,14 @@ await rm("_site", {
   force: true,
 });
 
-await mkdir("_site/assets/", { recursive: true });
+await mkdir("_site/assets/data", { recursive: true });
 
 await copyFile("src/index.html", "_site/index.html");
-await copyFile("src/assets/projects.js", "_site/assets/script.js");
-await copyFile("src/projects.json", "_site/projects.json");
+await copyFile("src/assets/projects.js", "_site/assets/projects.js");
+await copyFile(
+  "src/assets/data/projects.json",
+  "_site/assets/data/projects.json",
+);
 await copyFile("src/robots.txt", "_site/robots.txt");
 await copyFile("src/sitemap.xml", "_site/sitemap.xml");
 
