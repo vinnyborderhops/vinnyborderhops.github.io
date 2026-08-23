@@ -8,7 +8,8 @@
     "start": "npx serve _site"
   },
   "devDependencies": {
-    "tailwindcss": "3.4.17"
+    "@tailwindcss/cli": "4.3.3",
+    "tailwindcss": "4.3.3"
   },
   "dependencies": {
     "serve": "^14.2.6"

@@ -58,21 +58,21 @@ function createProjectCard(project, index) {
   description.className = "project-card-description";
   description.textContent = project.description;
 
-  const languages = document.createElement("div");
-  languages.className = "project-card-tags";
-  languages.setAttribute("aria-label", "Languages used");
+  const tags = document.createElement("div");
+  tags.className = "project-card-tags";
+  tags.setAttribute("aria-label", "Technologies used");
 
-  for (const language of project.languages ?? []) {
+  for (const technology of project.tags ?? []) {
     const tag = document.createElement("span");
 
     tag.className = "project-card-tag";
 
-    tag.textContent = language;
+    tag.textContent = technology;
 
-    languages.append(tag);
+    tags.append(tag);
   }
 
-  card.append(header, title, description, languages);
+  card.append(header, title, description, tags);
 
   return card;
 }

@@ -1,6 +1,8 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-accent: #fb923c;
+}
 
 @layer base {
   html {
@@ -19,7 +21,7 @@
         rgb(124 45 18 / 0.08),
         transparent 30rem
       ),
-      theme("colors.stone.950");
+      var(--color-stone-950);
   }
 
   ::selection {
@@ -31,10 +33,10 @@
   .project-card {
     @apply flex min-h-56 flex-col rounded-2xl border border-stone-800/80 bg-stone-900/70 p-6;
     @apply shadow-lg shadow-black/10;
-    @apply transition-[transform,background-color,border-color,box-shadow] duration-200 ease-out;
+    @apply transition-[translate,background-color,border-color,box-shadow] duration-200 ease-out;
     @apply hover:-translate-y-1 hover:border-accent/80 hover:bg-stone-900;
     @apply hover:shadow-xl hover:shadow-black/25;
-    @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-accent;
+    @apply focus:outline-hidden focus-visible:ring-2 focus-visible:ring-accent;
     @apply focus-visible:ring-offset-4 focus-visible:ring-offset-stone-950;
   }
 
@@ -48,7 +50,7 @@
 
   .project-card-arrow {
     @apply text-xl text-stone-400;
-    @apply transition-[transform,color] duration-200 ease-out;
+    @apply transition-[translate,color] duration-200 ease-out;
     @apply group-hover:-translate-y-0.5 group-hover:translate-x-0.5;
     @apply group-hover:text-accent;
   }

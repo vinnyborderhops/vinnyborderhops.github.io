@@ -4,6 +4,6 @@
     "description": "Compresses videos below Discord's 10 MB limit with FFmpeg and hardware acceleration.",
     "url": "https://github.com/vinnyborderhops/discord-video-compressor",
     "category": "Utility",
-    "languages": ["Python"]
+    "tags": ["Python", "FFmpeg"]
   }
 ]
