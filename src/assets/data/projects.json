@@ -5,5 +5,12 @@
     "url": "https://github.com/vinnyborderhops/discord-video-compressor",
     "category": "Utility",
     "tags": ["Python", "FFmpeg"]
-  }
+  },
+  {
+  "title": "PARKOUR Legacy Map",
+  "description": "Interactive 3D map of PARKOUR's Legacy map (OLD MAP)",
+  "url": "https://vinnyborderhops.github.io/PARKOUR-Legacy-Map/",
+  "category": "Web",
+  "tags": ["JavaScript", "three.js"]
+}
 ]
